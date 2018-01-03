@@ -1,0 +1,61 @@
+// //fix the is-# property
+// //fix the skip-#property
+//
+// =column-less-3
+//   flex-basis: 100% !important
+//   max-width: 100% !important
+//
+// =column-properties
+//   flex-shrink: 1
+//   flex-grow: 1
+//
+//   @for $i from 1 through 12
+//     & .is-#{$i}
+//       flex-basis: ($i/12) * 100% !important
+//
+//       // +mobile-view
+//       //   +column-less-3
+//       // +tablet-view
+//       //   +column-less-3
+//
+//
+//     & .skip-#{$i}
+//       margin-left: ($i/12) * 100% !important
+//
+//     & > :not(:last-child)
+//       margin-bottom: .5em
+//
+// div[role="row"]
+//   +horizontal-layout
+//   // display: flex
+//   // flex-direction: row
+//   flex-basis: 100%
+//   flex-wrap: wrap
+//
+//   & div[role="column"]
+//     +column-properties
+//
+//   // +mobile-view
+//   //   +vertical-layout
+//   //
+//   +tablet-view
+//     // display: inline-block
+//   //   +vertical-layout
+
+
+div[role="row"]
+  display: flex
+  flex-direction: row !important
+  // flex-flow: row wrap
+  // flex-wrap:
+  // display: flex
+  // flex-direction: row !important
+
+  @for $i from 1 through 12
+    & .is-#{$i}
+      flex-basis: ($i/12) * 100%
+    & .skip-#{$i}
+      margin-left: ($i/12) * 100%
+
+  +tablet-view
+    flex-direction: column !important

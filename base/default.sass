@@ -1,0 +1,186 @@
+$_default-font-stack: $font-stack !default
+$_default-font-size: $base-font-size !default
+$_default-font-color: #646464
+$_default-background-color: #f1f1f1
+
+// all with _ are local
+// but those without are global
+
+// you need to create a flex toolbar
+// where the toolbar title and header are separe
+// title is left tools can be right
+// but the last child is automatically pushed to the right side of navigation
+
+//you also need a navigationbar .. a left navagation bar.. using li
+
+// you also need a vertical list
+
+html
+  font-family: $_default-font-stack
+  font-size: $_default-font-size
+  color: $_default-font-color
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  width: 100%
+  overflow-x: hidden
+  overflow-y: scroll
+  text-rendering: optimizeLegibility
+  z-index: 0
+
+
+button,
+input,
+select,
+textarea
+  border: 1px solid $light-1
+  border-radius: $base-curve
+  outline-color: transparent
+  font: inherit
+  background: #fcfcfc
+  color: $_default-font-color
+
+p,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+button,
+input,
+select,
+hr,
+code,
+  padding: $base-vertical-padding $base-padding
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+  padding: 0 $base-padding
+
+label
+  padding: 0 $base-padding
+
+ul
+  +vertical-layout
+  list-style: none
+
+a
+  text-decoration: none
+  font-size: inherit
+  color: $_default-font-color
+
+img
+  height: auto
+  max-width: 100%
+
+
+footer
+  +vertical-layout
+  flex-grow: 0
+  justify-content: center
+  padding: ($base-vertical-padding* $golden-ratio * 2  ) 0
+
+  & ul[role="row"]
+    align-self: center
+    +horizontal-layout
+
+    +tablet-view
+      flex-direction: column
+
+      & li
+        justify-content: center
+
+    +mobile-view
+      flex-direction: column
+
+      & li
+        justify-content: center
+
+    & li
+      flex: 1
+      & *
+        padding: $base-vertical-padding 0
+
+      // padding: $base-padding/2 !important
+
+
+input[type="text"],
+input[type="password"],
+textarea
+
+input[type="checkbox"],
+input[type="radio"]
+  vertical-align: middle
+
+textarea
+  max-width: 1024px
+
+small
+  font-size: $_default-font-size
+
+h1
+  font-size: resize(56.03442914648858px,$golden-ratio)
+  +mobile-view
+    font-size: resize( 13.228768px,$golden-ratio)
+h2
+  font-size: resize(34.631909237632px,$golden-ratio)
+  +mobile-view
+    font-size: resize( 13.228768px,$golden-ratio)
+
+h3
+  font-size: resize(21.40414624px,$golden-ratio)
+  +mobile-view
+    font-size: resize( 13.228768px,$golden-ratio)
+
+h4
+  font-size: resize( 13.228768px,$golden-ratio)
+
+
+h5
+  font-size: resize(11.326px,$golden-ratio)
+  +mobile-view
+    font-size: resize(11.326px,$golden-ratio)
+
+h6
+  font-size: resize(7px,$golden-ratio)
+  +mobile-view
+    font-size: resize(11.326px,$golden-ratio)
+
+div
+  +vertical-layout
+
+  & .centered
+    align-self: center
+
+  & .horizontal
+    flex-direction: row
+
+  & > .content
+    // background: teal
+
+
+      // max-width: $base-width + $base-padding*2
+      // flex-grow: 1
+
+table
+  width: 100%
+  border: $default-border
+
+  & td
+    padding: $base-padding
+
+  thead
+    border-bottom: 1px solid $light-1
+
+  tbody
+    tr
+      td[role="title"]

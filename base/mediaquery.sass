@@ -1,0 +1,24 @@
+// add more screen size
+
+=mobile-view
+  @media screen and (max-width: 384px)
+    @content
+
+=tablet-view
+  @media screen and (max-width: 768px)
+    @content
+
+=desktop-view
+  @media screen and (max-width: 1024px)
+    @content
+
+=flex
+  display: flex
+
+=horizontal-layout
+  +flex
+  flex-direction: row
+
+=vertical-layout
+  +flex
+  flex-direction: column

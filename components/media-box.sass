@@ -1,0 +1,23 @@
+.media-box
+  display: grid
+  padding: 0 $base-padding
+  grid-gap: $base-padding/4
+  color: white
+  width: 100%
+  grid-template-columns: repeat(2)
+  grid-template-areas: "image title" ". description"
+
+  & div[role="img"]
+    grid-area: image
+    height: 48px
+    width: 48px
+
+  & div[role="heading"]
+    background: teal
+    justify-content: center
+    grid-area: title
+
+  & div[role="definition"]
+    justify-content: flex-start
+    background: seagreen
+    grid-area: description

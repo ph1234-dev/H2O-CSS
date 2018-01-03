@@ -1,0 +1,31 @@
+=horizontal-arrow-position
+  top: 100%
+  left: 40%
+  background: coral
+  &::before
+    background: yellow !important
+  & .right
+    right: 20% !important
+
+=arrow-box
+  background-color: seagreen
+  position: relative
+  color: white
+
+  &:hover
+    background-color: teal
+
+  &:after
+    border-color: seagreen
+    content: ""
+    position: absolute
+    @content
+
+.has-bottom-arrow
+  +arrow-box
+    border-top: resize(4px,$golden-ratio) solid seagreen
+    border-right: resize(4px,$golden-ratio) solid transparent
+    border-bottom: resize(4px,$golden-ratio) solid transparent
+    border-left: resize(4px,$golden-ratio) solid transparent
+    top: 100%
+    left: 45%

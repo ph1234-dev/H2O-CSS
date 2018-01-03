@@ -1,0 +1,16 @@
+div[role="banner"]
+  display: flex
+  flex-direction: row
+  justify-content: center
+  padding: ($base-padding* $golden-ratio * 5  ) 0
+  // flex-grow: 1
+  // flex-basis: 100%
+  flex-shrink: 1
+  width: 100%
+
+
+  +tablet-view
+    padding: ($base-padding* $golden-ratio * 2  ) 0
+  +mobile-view
+    padding: ($base-padding* $golden-ratio ) 0
+    // use font size of h4 for mobile

@@ -1,0 +1,56 @@
+form
+  display: inline-block
+  & .header
+    margin-bottom: $base-padding
+    padding: $base-padding
+    & > *:not(:last-child)
+      margin-bottom: $base-vertical-padding
+
+  & .content
+    margin-bottom: $base-padding
+    padding: 0 $base-padding
+
+    & > *:not(:last-child)
+      margin-bottom: $base-vertical-padding
+
+  & .actions
+    +horizontal-layout
+    display: flex
+    padding: 0 $base-padding
+
+    & > *:not(:last-child)
+      margin-right: $base-padding/$golden-ratio
+
+
+  // display: grid
+  // grid-gap: $base-padding
+  // grid-template-columns: repeat(1)
+  // grid-row: minmax(100px,auto)
+  // grid-template-areas: "header" "content" "actions"
+  //
+  // +tablet-view
+  //   // padding: $base-padding
+  //   padding: 0
+  //   // h1,
+  //   // h2,
+  //   // h3,
+  //   // h4,
+  //   // h5,
+  //   // h6
+  //   //   padding: 0 !important
+    //
+  // & .header
+  //   +vertical-layout
+  //   grid-area: header
+  //
+  // & .content
+  //   +vertical-layout
+  //   grid-area: content
+  //
+  //   & > *
+  //     margin-bottom: $base-vertical-padding
+  //
+  //
+  // & .actions
+  //   +horizontal-layout
+  //   grid-area: actions

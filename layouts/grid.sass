@@ -1,0 +1,19 @@
+ul[role="grid"]
+
+  display: grid
+  grid-gap: $base-padding
+  grid-template-columns: repeat(3, 1fr)
+
+  @for $i from 1 through 6
+    &.has-#{$i}-cols
+      grid-template-columns: repeat($i, 1fr) !important
+      padding: $base-padding
+      
+  +tablet-view
+    grid-template-columns: repeat(1, 1fr)
+
+  +mobile-view
+    grid-template-columns: repeat(1, 1fr)
+
+  & li
+    padding: 0

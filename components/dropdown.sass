@@ -1,0 +1,24 @@
+// bug found here.
+// needs to fix the layout of the content
+
+.dropdown
+  position: relative
+  display: inline-block
+  padding: 0
+
+  &:hover
+
+    & .content
+      display: block
+
+  & .content
+    // margin-top: $base-margin
+    width: 100%
+    display: none
+    // position: absolute
+    // background: #f1f1f1
+    background: seagreen
+    color: white
+    padding: $base-padding 0
+    border: $default-border
+    z-index: 1

@@ -1,0 +1,28 @@
+.padded
+  padding: $base-padding !important
+
+.paddingless
+  padding: 0 !important
+
+.dark-1
+  background: $dark-1
+  color: #646464
+
+
+//  the fix for this is that set the padding instead of the
+.container-1024
+  display: flex
+  width: 1024px
+.primary
+  background: $color-primary !important
+  color: $light-1
+
+.accent
+  background: $color-accent !important
+  color: $light-1
+
+.desktop-view
+  +mobile-view
+    display: none
+  +tablet-view
+    display: none

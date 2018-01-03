@@ -1,0 +1,38 @@
+div[role="tab"]
+  +vertical-layout
+  height: auto
+  padding: $base-padding 0
+
+  & ul[role="tablist"]
+    background: #e5e5e5
+    +horizontal-layout
+
+    & li
+      // background: royalblue
+      &:last-child
+        background: transparent
+        flex-grow: 1
+        border-top: 1px solid rgba(0,0,0,.04)
+        border-right: 1px solid rgba(0,0,0,.04)
+        border-bottom: 1px solid rgba(0,0,0,.04)
+
+      &:not(:last-child)
+        border-top: 1px solid rgba(0,0,0,.04)
+        border-right: 1px solid rgba(0,0,0,.04)
+        border-bottom: 1px solid rgba(0,0,0,.04)
+        padding: $base-vertical-padding $base-padding
+        cursor: pointer
+        background: #eaeaea
+
+      &:hover
+        border-bottom: red
+
+      &.is-active
+        // background: rgba($color-primary,.4) !important
+        background: seagreen
+        color: white
+        // border-bottom: 1px solid  royalblue
+        // color: rgba(white,.84)
+
+  & div[role="tabpanel"]
+    min-height: 300px

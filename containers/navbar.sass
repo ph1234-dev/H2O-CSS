@@ -1,0 +1,67 @@
+nav
+  +horizontal-layout
+  background-color: #f1f1f1
+  border-bottom: 1px solid #e1e1e1
+  position: fixed
+  width: 100%
+
+  .hamburger
+
+    display: none
+    text-align: center
+    align-content: center
+    +tablet-view
+      display: block
+      background: seagreen
+      color: white
+
+      & ul
+        display: none
+
+    &:hover
+      transition: top $transition-duration
+
+      & ul
+        margin-top: 6px
+        display: block
+        background: $dark-1
+        color: $light-1
+
+    & ul
+      display: none
+      background: $dark-1
+      display: absolute
+      position: absolute
+      width: 100%
+      // left: 0
+      right: 0
+      // top: 0 + $base-padding + $base-font-size
+
+      & li
+        text-align: left
+        color: $dark-2
+        cursor: pointer
+
+
+
+        &:not(:last-child)
+          border-bottom: 1px solid #323232
+
+        +hover
+
+
+  &>ul[role="menu"]
+    display: inherit
+    flex-direction: inherit
+    &.left
+      flex-grow: 1
+    &.right
+      flex-grow: 0
+      +tablet-view
+        display: none
+
+    & > li
+      // background: #e4e4e4
+      cursor: pointer
+
+      +hover

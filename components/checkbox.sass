@@ -1,0 +1,46 @@
+label[role="checkbox"]
+  +horizontal-layout
+  cursor: pointer
+  padding: 0 $base-padding*1.25
+
+  // @media (max-width: 100px)
+  //   +vertical-layout
+  //
+  //   & input
+  //
+  //     & ~ span[role="checkbox"]
+  //         margin-left: $base-padding - 12px !important
+  //
+  //   & > .text
+  //     margin-left: - $base-margin !important
+  //     padding-left: 0 !important
+
+
+  +mobile-view
+    padding: $base-padding
+
+
+  & input[type="checkbox"]
+    opacity: 0
+    position: absolute
+
+    &:checked
+      & ~ span[role="checkbox"]
+        border-bottom: $thicker-border-hovered
+        border-right: $thicker-border-hovered
+
+    & ~ span[role="checkbox"]
+      left: 0
+      top: 0
+      min-width: 12px
+      min-height: 24px
+      max-width: 12px
+      max-height: 24px
+      transform: rotate(40deg)
+      border-bottom: $thicker-border
+      border-right: $thicker-border
+      // margin-left:  $base-vertical-padding !important
+
+      & ~ .text
+        // base-margin +
+        margin-left: $base-margin + 12px
