@@ -1,2 +1,2 @@
 # H2O-CSS
-Minimalist CSS Framework ( Name not yet final )
+A minimalist and lightweight Responsive CSS Framework. 
